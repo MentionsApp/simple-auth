@@ -1,0 +1,8 @@
+{
+  "extends": "@mentions-simple-auth/typescript-config/react-library.json",
+  "compilerOptions": {
+    "jsx": "react"
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

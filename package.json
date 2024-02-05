@@ -1,5 +1,5 @@
 {
-  "name": "simple-auth",
+  "name": "simple-auth-root",
   "private": true,
   "scripts": {
     "build": "turbo build",
@@ -8,8 +8,8 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@mentions-simple-auth/eslint-config": "workspace:*",
+    "@mentions-simple-auth/typescript-config": "workspace:*",
     "prettier": "^3.1.1",
     "turbo": "latest"
   },

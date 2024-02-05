@@ -1,0 +1,54 @@
+{
+  "name": "@mentions-simple-auth/nextjs",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./pages": {
+      "require": "./dist/pages/index.js",
+      "import": "./dist/pages/index.js",
+      "types": "./dist/pages/index.d.ts"
+    },
+    "./app": {
+      "require": "./dist/app/index.js",
+      "import": "./dist/app/index.js",
+      "types": "./dist/app/index.d.ts"
+    }
+  },
+  "scripts": {
+    "lint": "eslint . --max-warnings 0",
+    "generate:component": "turbo gen react-component",
+    "dev": "npm run build -- --watch",
+    "build": "tsup --entry src/app/index.ts --entry src/pages/index.ts --dts"
+  },
+  "devDependencies": {
+    "@mentions-simple-auth/eslint-config": "workspace:*",
+    "@mentions-simple-auth/typescript-config": "workspace:*",
+    "@types/eslint": "^8.56.1",
+    "@types/node": "^20.10.6",
+    "@types/react": "^18.2.46",
+    "@types/react-dom": "^18.2.18",
+    "eslint": "^8.56.0",
+    "jwt-decode": "^4.0.0",
+    "react": "^18.2.0",
+    "next": "^13.5.6",
+    "tsup": "^8.0.1",
+    "typescript": "^5.3.3"
+  },
+  "peerDependencies": {
+    "next": "^13.5.6",
+    "react": "^18.2.0",
+    "typescript": ">=5.0.0",
+    "zustand": "^4.5.0",
+    "jwt-decode": "^4.0.0",
+    "zustand-x": "^3.0.2",
+    "zod": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@mentions-simple-auth/core": "workspace:*"
+  }
+}
